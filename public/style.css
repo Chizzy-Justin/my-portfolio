@@ -1,0 +1,154 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Space Grotesk', sans-serif;
+    
+}
+.nav-item{
+    padding: 0.5rem 2rem;
+}
+nav{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.intro{
+    background-image: url(images/background.png);
+    color: hsl(205, 79%, 95%);
+    padding-left: 2rem;
+}
+.intro1{
+    padding: 4rem 4rem;
+    text-align: center;
+}
+.intro2{
+    padding: 4rem 4rem;
+    padding-left: 2rem;
+    padding-bottom: 0%;
+}
+.myPic {
+    height: 35rem;
+    transform: rotate(25deg);
+}
+.intro3{
+    padding-top: 0;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+.intro .btn{
+    text-align: center;
+    margin: 1rem;
+    margin-top: -6rem;
+
+}
+.myStack{
+    text-align: center;
+    color: rgb(77, 81, 88);
+    padding: 3rem;
+}
+.intro21, .intro22{
+    padding: 7%;
+}
+
+.myStack .card{
+    margin: 2rem;
+    text-align: left;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+padding: 2rem 3rem;
+}
+.portfolio{
+    text-align: center;
+}
+
+
+.portfolio .card{
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+/* border-radius: 16px; */
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    width: 55%;
+    padding: 0rem 2rem;
+    height: 3rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+   overflow: auto;
+    
+}
+.item{
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.51);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.2px);
+-webkit-backdrop-filter: blur(7.2px);
+border: 1px solid rgba(255, 255, 255, 0.23);
+
+}
+.list-group-item{
+    background-color: transparent;
+    border: 0;
+}
+.list-group-item a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.portfolio{
+    background-image: url(images/background.png);
+    padding-top: 2rem;
+}
+.portfolio .card::-webkit-scrollbar{
+    display: none;
+}
+
+.port-spy{
+   display: inline-block;
+   
+    padding:0.2rem 1.5rem;
+}
+#port-content{
+    width: 90%;
+    margin-left: 5rem;
+    margin-right: 5rem;
+   height: 70vh !important;
+   margin-bottom: 2rem;
+}
+.port-display{
+    padding-top: 3rem;
+}
+.carousel-image{
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+    height: 20rem;
+    width: 100%;
+}
+.carousel-images{
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+    height: 10rem;
+    width: 100%;
+}
+.c-ind{
+    height: 5px !important;
+    width: 5px !important;
+    border-radius: 100%;
+}
+.contact{
+    padding: 3rem;
+}
+footer{
+    text-align: center;
+}

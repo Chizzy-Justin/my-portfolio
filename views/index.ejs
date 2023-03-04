@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#529dbd">
+    <title>Accstro</title>
+  
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container"> 
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top navbar-light shadow-5-strong">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#myStack">Stack</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact Me</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+<section class="intro">
+    <div class="row">
+        <div class="col-md-6 intro1">
+            <h1>My Name is Chizzy Justin, I am a web Developer</h1>
+            <p>  Donec ultrices tincidunt arcu non sodales neque sodales ut. Mattis molestie a iaculis at erat pellentesque adipiscing. Magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Adipiscing elit ut aliquam purus sit amet luctus venenatis lectus. Ultrices vitae auctor eu augue ut lectus arcu bibendum at. Odio euismod lacinia at quis risus sed vulputate odio ut. Cursus mattis molestie a iaculis at erat pellentesque adipiscing.
+              </p>
+        </div>
+        <div class="col-md-6 intro2">
+            <img src="images/tphone.png" alt="Welcome!" class="myPic">
+        </div>
+        <div class="col-md-6 intro3">
+          <button type="submit" class="btn btn-success">Book A Job</button>
+          <button type="submit" class="btn btn-outline-primary">Visit My Portfolio</button>
+        </div>
+    </div>
+</section>
+<section class="myStack" id="myStack">
+  <h3>MY STACK</h3>
+
+  <div class="row">
+    <div class="col-md-6 intro21">
+      <h4>FRONTEND</h4>
+      <div class="card">
+        <h5><span><i class="fab fa-html5"></i></span>HTML</h5>
+        <h5><span><i class="fab fa-css3-alt"></i></span>CSS + bootstrap</h5>
+        <h5><span><i class="fab fa-js-square"></i></span>JavaScript + JQuery</h5>
+      </div>
+
+    </div>
+    <div class="col-md-6 intro22">
+      <h4>BACKEND</h4>
+      <div class="card">
+        <h5><span><i class="fab fa-node"></i></span>Node.JS + Express</h5>
+        <h5><span><i class="fad fa-database"></i></span>MongoDB</h5>
+        <h5><span><i class="fas fa-key"></i></span>Security & Authentication</h5>
+      </div>
+     
+    </div>
+  </div>
+</section>
+
+
+
+<section class="portfolio" id="portfolio">
+   <div class="row">
+    <div class="card mx-auto sticky-top">
+      <ul class="projects-list list-group list-group-horizontal">
+
+   <!-- add ejs code here, for each loop for each li item -->
+ <%  for (let i = 0; i < imageArray.length; i++) {%>
+    
+    <li class="list-group-item"> <a class="port-spy" href="#item-<%=i%>"><%=imageArray[i].name%></a></li>
+<%}%>
+      
+       <!-- end ejs here  -->
+      </ul>
+     </div> 
+        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="50" tabindex="0">
+            <div class="card mx-auto mt-5 pt-5 h-50" id="port-content">
+           
+                <div class="row">
+                
+                 
+     <!-- add other ejs code here, same for each loop: change id number(item-1 and myModal-1), change image, based on arrays-->
+    <% for (let i = 0; i < imageArray.length; i++) {%>
+      
+      
+  
+        <div class="col-lg-4 col-md-6 col-sm-12 port-display" id="item-<%=i%>">
+                    <!-- Trigger the modal with a button -->
+  
+                   <a href="#portfolio" data-toggle="modal" data-target="#myModal-<%=i%>">
+                   <article class="item">
+                     <img src="<%=imageArray[i].images[0]%>" class="carousel-images" alt="work background" srcset="">
+<!-- change name of this h2(the JAVA2) -->
+                     <h2 id=""><%=imageArray[i].name%></h2>
+  
+                   </article>
+                 </a>
+                 </div>
+                <%}%>
+     <!-- end ejs here  -->
+                        </div>
+                      
+                      </div>
+                    </div>
+                  </div>
+                  
+                 
+        <!-- Modal -->
+  <!-- add third ejs here, based on the second one: change id of myModal-1 for each, change all myCarousel-1 and images for the carousel from the image object array  -->
+ <% for (let i = 0; i < imageArray.length; i++) {%>
+    
+    
+
+  <div class="modal fade" id="myModal-<%=i%>" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+         
+          <div class="modal-body">
+            
+            <div id="myCarousel-<%=i%>" class="carousel slide" data-bs-ride="carousel">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <div class="carousel-indicators">
+                
+                <button type="button" data-bs-target="#myCarousel-<%=i%>" data-bs-slide-to="0" class="c-ind active" aria-current="true" aria-label="Slide 1"></button>
+                
+                <%for (let j = 1; j < imageArray[i].images.length; j++) {%>
+                  
+                  <button type="button" data-bs-target="#myCarousel-<%=i%>" data-bs-slide-to="<%=j%>" class="c-ind" aria-label="Slide <%=j+1%>"></button>
+              
+              <%}%>
+                 </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                   <img src="<%=imageArray[i].images[0]%>" class="carousel-image" alt="work background" srcset="">
+                </div>
+               <% for (let j = 1; j < imageArray[i].images.length; j++) {%>
+                 
+                  <div class="carousel-item">
+                    <img src="<%=imageArray[i].images[j]%>" class="carousel-image" alt="work background" srcset="">
+                  </div>
+             <% }%>
+               
+                
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel-<%=i%>" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#myCarousel-<%=i%>" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+         
+        </div>
+        
+      </div>
+    </div>
+  <%}%>
+    <!-- end third ejs here  -->
+            
+            </div>
+            
+            
+           
+        </div>
+        </div>
+    
+   
+</section>
+<section class="contact" id="contact">
+  <div class="row">
+    <div class="col-md-6">
+<img src="images/tme.png" alt="">
+    </div>
+    <div class="col-md-6">
+      <h1>CONTACT ME!</h1>
+      <P> Need to send me a message?</P>
+      <p> Do you need a job done for you?</p> 
+      <p>Contact me at anytime!</p>        
+           
+      
+      <button class="btn btn-primary" type="submit"><a href="mailto:nnabugwuchizitelu@gmail.com">send an Email</a></button>
+      <button class="btn btn-success" type="submit"><a href="tel:+2348022184833">Give a call </a></button>
+      <button class="btn btn-outline-success" type="submit"> <a href="https://wa.me/2348022184833">Whatsapp Message</a></button>
+    </div>
+  </div>
+</section>
+
+
+<footer>2023, &copy;Chizzy Justin @ Accstro.com</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  
+</body>
+</html>
